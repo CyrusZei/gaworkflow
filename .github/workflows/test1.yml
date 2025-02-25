@@ -1,0 +1,11 @@
+name: workflow
+
+on:
+    workflow_dispatch:
+
+jobs:
+    my-cool-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: my work1
+              run: echo "yay"
