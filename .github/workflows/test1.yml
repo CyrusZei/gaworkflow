@@ -1,11 +1,11 @@
-name: workflow
+name: Manual workflow test
 
 on:
     workflow_dispatch:
 
 jobs:
-    my-cool-job:
+    my-cool-workflow:
         runs-on: ubuntu-latest
         steps:
-            - name: my work1
+            - name: my flow
               run: echo "yay"
