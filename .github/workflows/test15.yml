@@ -1,0 +1,11 @@
+name: my 15 workflow
+
+on:
+    push:
+
+jobs:
+    my-new-workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - name: cool workflow
+              run: echo "hello cool workflow"
