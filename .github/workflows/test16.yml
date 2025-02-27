@@ -18,3 +18,10 @@ jobs:
             echo "Branch ${{ github.ref_name }} "
             echo "Workflow ${{github.workflow}} "
             echo "Actor ${{ github.actor }} "
+        - name: if main stuffs
+          if: github.ref_name = 'main'
+          run: echo "only runs on main"
+        - name: if not main
+          if: github.ref_name != 'main'
+          run: echo "Only runs if NOT main"
+        
