@@ -1,0 +1,13 @@
+name: Gemini workflow test
+
+on:
+    push:
+
+jobs:
+    my-gemini-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check out
+              uses: actions/checkout@v4
+            - name: print current dir
+              run: ls
