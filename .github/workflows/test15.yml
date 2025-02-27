@@ -1,11 +1,16 @@
-name: my 15 workflow
+name: My workflow 15
 
 on:
     push:
+    pull_request:
 
 jobs:
-    my-new-workflow:
+    super-15-cool-workflow:
         runs-on: ubuntu-latest
         steps:
             - name: cool workflow
-              run: echo "hello cool workflow"
+              run: echo "yo workflow"
+            - name: print SHA
+              run: echo "SHA ${{ github.sha }} "
+            - name: print something
+              run: echo "something ${{ github.env}} "
