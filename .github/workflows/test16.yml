@@ -19,7 +19,7 @@ jobs:
             echo "Workflow ${{github.workflow}} "
             echo "Actor ${{ github.actor }} "
         - name: if main stuffs
-          if: github.ref_name = 'main'
+          if: github.ref_name == 'main'
           run: echo "only runs on main"
         - name: if not main
           if: github.ref_name != 'main'
