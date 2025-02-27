@@ -11,3 +11,10 @@ jobs:
           uses: actions/checkout@v4
         - name: print files
           run: ls
+        - name: Enviroment Variables
+          run: |
+            echo "Repository ${{ github.repository }} "
+            echo "Commit SHA ${{ github.sha }} "
+            echo "Branch ${{ github.ref_name }} "
+            echo "Workflow ${{github.workflow}} "
+            echo "Actor ${{ github.actor }} "
