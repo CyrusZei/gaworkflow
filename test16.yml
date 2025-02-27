@@ -1,0 +1,13 @@
+name: my new workflow 16
+
+on:
+  push:
+
+jobs:
+    my-16-workflow:
+      runs-on: ubuntu-latest
+      steps:
+        - name: get code
+          uses: actions/checkout@v4
+        - name: print files
+          run: ls
