@@ -3,7 +3,7 @@ name: Manual workflow dispatch
 on:
     workflow_dispatch:
         inputs:
-            enviroment:
+            environment:
                 description: "Envoriment to deploy to"
                 type: environment
                 required: true
