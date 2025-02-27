@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: cool workflow
-              run: echo "yo workflow"
+              uses: actions/checkout@v4
             - name: print SHA
               run: echo "SHA ${{ github.sha }} "
             - name: print something
