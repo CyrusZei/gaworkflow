@@ -13,3 +13,5 @@ jobs:
           run: ls
         - name: make file
           run: touch README2.md
+        - name: print files after make file
+          run: ls
