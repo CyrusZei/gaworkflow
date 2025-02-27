@@ -1,0 +1,23 @@
+name: My workflow 17
+
+on:
+    push:
+
+jobs:
+    my-cool-workflow-17:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get code
+              uses: actions/checkout/@v4
+            - name: print files
+              run: ls -l
+            - name: list ENV
+              run: |
+                echo " repo name ${{ github.ref_name }}"
+            - name: if main
+              if: github.ref_name == 'main'
+              run: echo "This is main"
+            - name: if NOT main
+              if: github.ref_name != 'main'
+              run: echo "This is NOT main"
+
