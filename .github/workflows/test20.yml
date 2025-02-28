@@ -1,4 +1,4 @@
-name: TypeScript linter
+name: cache
 
 on:
   push:
@@ -13,10 +13,3 @@ jobs:
         uses: actions/setup-node@v4 # or v4
         with:
           node-version: '18' # or your version
-      - name: Install dependencies
-        run: |
-          npm install typescript eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
-      - name: Run TypeScript linter
-        run: |
-          set -e
-          npx eslint src/bad.ts
