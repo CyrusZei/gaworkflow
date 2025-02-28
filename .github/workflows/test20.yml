@@ -1,15 +1,14 @@
-name: cache
+name: Cache2
 
 on:
-  push:
-
+    push:
 jobs:
-  my-typescript-linter:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Install Node.js
-        uses: actions/setup-node@v4 # or v4
-        with:
-          node-version: '18' # or your version
+    my-new-cache-workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Fetch code
+              uses: actions/checkout@v4
+            - name: Install node 18
+              uses: actions/setup-node@v4
+              with:
+                node-version: '18'
