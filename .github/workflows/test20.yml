@@ -1,15 +1,22 @@
-name: markdown linter
+name: TypeScript linter
 
 on:
   push:
 
 jobs:
-  my-markdown-linter:
+  my-typescript-linter:
     runs-on: ubuntu-latest
     steps:
-      - name: Install linter
-        run: npm install remark-cli remark-preset-lint-consistent
-      - name: Run markdown linter
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4 # or v4
+        with:
+          node-version: '18' # or your version
+      - name: Install dependencies
         run: |
-          set -e # Add set -e here
-          npx remark . --use remark-preset-lint-consistent --frail
+          npm install typescript eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+      - name: Run TypeScript linter
+        run: |
+          set -e
+          npx eslint src/bad.ts
