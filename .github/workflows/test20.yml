@@ -1,0 +1,11 @@
+name: markdown linter
+
+on:
+    push:
+
+jobs:
+    my-markdown-linter:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install linter
+              run: npm install remark-cli remark-preset-lint-consistent
