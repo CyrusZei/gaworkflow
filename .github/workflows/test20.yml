@@ -1,14 +1,14 @@
-name: Cache2
+name: Cache3
 
 on:
     push:
 jobs:
-    my-new-cache-workflow:
+    my-cache-handle-v3:
         runs-on: ubuntu-latest
         steps:
             - name: Fetch code
               uses: actions/checkout@v4
-            - name: Install node 18
+            - name: Install node
               uses: actions/setup-node@v4
               with:
                 node-version: '18'
