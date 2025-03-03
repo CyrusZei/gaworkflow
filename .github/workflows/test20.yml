@@ -36,5 +36,3 @@ jobs:
         run: ls
       - name: show current folder
         run: pwd
-      - name: list download files
-        run: ls -l dist
