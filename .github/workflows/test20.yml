@@ -32,5 +32,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: react-build
+      - name: show files
+        run: ls
+      - name: show current folder
+        run: pwd
       - name: list download files
         run: ls -l dist
