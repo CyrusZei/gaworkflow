@@ -34,5 +34,7 @@ jobs:
           name: react-build
       - name: show files
         run: ls
+      - name: Secrets mock API-KEY
+        run: ${{ secrets.API_KEY}}
       - name: show current folder
         run: pwd
