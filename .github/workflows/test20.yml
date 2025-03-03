@@ -33,4 +33,4 @@ jobs:
         with:
           name: react-build
       - name: list download files
-        run: ls -l dis
+        run: ls -l dist
